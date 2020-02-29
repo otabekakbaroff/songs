@@ -9,6 +9,11 @@ server.get('/', (req,res)=>{
 
     res.status(200).json(songs);
 })
+server.get('/users', (req,res)=>{
+    const users=[{name:"Johny", age:"12", gender:"male"}];
+
+    res.status(200).json(users);
+})
 
 const port = process.env.PORT || 5000;
 server.listen(port, ()=> console.log(`\n*** Running on port ${port} ***\n`))
